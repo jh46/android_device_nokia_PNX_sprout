@@ -20,12 +20,16 @@
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc                      /misc                            emmc    defaults                                             defaults
-/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.*.auto*     /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
+
 # FIH partition
 /dev/block/bootdevice/by-name/box        /vendor/BBSYS             ext4   noatime,nosuid,nodev,barrier=1,context=u:object_r:bbs_file:s0                           wait,formattable
 /dev/block/bootdevice/by-name/hidden     /vendor/hidden            ext4   ro,nosuid,nodev,barrier=1,context=u:object_r:hidden_files:s0                       wait,slotselect,formattable
 /dev/block/bootdevice/by-name/cda        /vendor/hidden/data       ext4   noatime,nosuid,nodev,barrier=1,context=u:object_r:cda_settings_files:s0                 wait,slotselect,formattable
 /dev/block/bootdevice/by-name/securefs   /vendor/securefs          ext4   noatime,nosuid,nodev,barrier=1,context=u:object_r:persist_drm_file:s0                   wait,formattable
+
+# Removeable
+/devices/soc/c084000.sdhci/mmc_host*     auto                      auto   defaults                 wait,voldmanaged=sdcard1:auto
+/devices/*/xhci-hcd.0.auto*              auto                      auto   defaults                 voldmanaged=usb:auto
 
 # ZRAM
 /dev/block/zram0                         none                      swap   defaults                 zramsize=25%,max_comp_streams=8,zram_backingdev_size=512M
