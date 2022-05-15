@@ -5,7 +5,7 @@
         manifest_fih.xml
         manifest_fih_PFAQ.xml
 -->
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
