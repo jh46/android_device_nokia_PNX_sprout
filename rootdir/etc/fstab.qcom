@@ -6,10 +6,10 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>                        <type>  <mnt_flags and options>                            <fs_mgr_flags>
-/dev/block/bootdevice/by-name/system                    /system                           ext4    ro,barrier=1,discard                                 wait,slotselect,avb,first_stage_mount
-/dev/block/bootdevice/by-name/vendor                    /vendor                           ext4    ro,barrier=1,discard                                 wait,slotselect,avb,first_stage_mount
-/dev/block/bootdevice/by-name/logdump                   /metadata                         ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
-/dev/block/bootdevice/by-name/userdata                  /data                             ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard,lazytime,errors=panic   wait,check,latemount,formattable,fileencryption=ice,quota,reservedsize=128M
+/dev/block/by-name/system                    /system                           ext4    ro,barrier=1,discard                                 wait,slotselect,avb,first_stage_mount
+/dev/block/by-name/vendor                    /vendor                           ext4    ro,barrier=1,discard                                 wait,slotselect,avb,first_stage_mount
+/dev/block/by-name/logdump                   /metadata                         ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/bootdevice/by-name/userdata                  /data                             ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard,lazytime,errors=panic   wait,check,latemount,formattable,fileencryption=::v1,quota,reservedsize=128M
 /devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1                  vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto
 /devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1                  vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt              vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait,slotselect
