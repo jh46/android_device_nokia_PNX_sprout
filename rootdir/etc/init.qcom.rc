@@ -407,12 +407,6 @@ on property:sys.boot_completed=1
 
     write /dev/kmsg "Boot completed "
 
-on property:persist.vendor.radio.atfwd.start=false
-    stop vendor.atfwd
-
-on property:vendor.radio.atfwd.start=false
-    stop vendor.atfwd
-
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
@@ -530,11 +524,6 @@ on property:persist.vendor.radio.nokia_fih_mcfg=1
     chmod 0666 /data/vendor/fih_mcfg/rfs_complete
     chown system vendor_rfs /data/vendor/fih_mcfg
 #-FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
-
-service vendor.atfwd /vendor/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
 
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     class main
