@@ -218,6 +218,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.sdm710
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
