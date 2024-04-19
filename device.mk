@@ -175,9 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/gps/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# GrapheneCamera
-PRODUCT_PACKAGES += GrapheneCamera
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \

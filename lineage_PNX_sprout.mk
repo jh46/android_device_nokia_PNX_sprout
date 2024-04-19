@@ -2,8 +2,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common LineageOS stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
@@ -12,7 +12,7 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_DEVICE := PNX_sprout
-PRODUCT_NAME := arrow_PNX_sprout
+PRODUCT_NAME := lineage_PNX_sprout
 PRODUCT_BRAND := Nokia
 PRODUCT_MODEL := Nokia 8.1
 PRODUCT_MANUFACTURER := HMD Global
