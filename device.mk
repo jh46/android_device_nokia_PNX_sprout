@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libprocessgroup.vendor \
     libtinycompress \
     libvolumelistener \
 
@@ -148,7 +149,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor \
-    android.hardware.biometrics.fingerprint@2.1-service.pnx
+    android.hardware.biometrics.fingerprint@2.1-service.pnx \
+    liblzma.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -360,6 +362,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     libjson \
+    libsqlite.vendor \
     librmnetctl \
     libxml2
 
