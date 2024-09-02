@@ -61,6 +61,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             ;;
+        vendor/etc/data/dsi_config.xml|vendor/etc/data/netmgr_config.xml)
+            [ "$2" = "" ] && return 0
+            fix_xml "${2}"
+            ;;
         vendor/etc/nfcee_access.xml)
             [ "$2" = "" ] && return 0
             sed -i -e 's|xliff=\"urn:oasis:names:tc:xliff:document:1.2|android=\"http:\/\/schemas.android.com\/apk\/res\/android|' "${2}"
