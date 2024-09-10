@@ -73,6 +73,11 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
             sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
             ;;
+        vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
+            if ! "${PATCHELF}" --print-needed "${2}" | grep -q "libcrypto_shim.so"; then
+                "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            fi
+            ;;
         vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
