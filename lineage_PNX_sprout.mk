@@ -20,9 +20,9 @@ PRODUCT_RELEASE_NAME := PNX_sprout
 PRODUCT_GMS_CLIENTID_BASE := android-hmd-rev2
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=PNX_sprout \
-    PRODUCT_NAME=Phoenix_00WW \
-    PRIVATE_BUILD_DESC="PNX_00WW_FIH-user 11 00WW_6_21F 00WW_6_21F release-keys"
+    BuildDesc="PNX_00WW_FIH-user 11 00WW_6_21F 00WW_6_21F release-keys" \
+    DeviceName=Phoenix_00WW \
+    DeviceProduct=PNX_sprout
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Nokia/Phoenix_00WW/PNX_sprout:11/RKQ1.200906.002/00WW_6_21F:user/release-keys
