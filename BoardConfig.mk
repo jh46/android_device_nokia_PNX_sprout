@@ -115,9 +115,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Graphics
 TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 
@@ -136,6 +133,9 @@ HWUI_COMPILE_FOR_PERF := true
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pnx
 TARGET_RECOVERY_DEVICE_MODULES := libinit_pnx
+
+# Media
+TARGET_USES_ION := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
