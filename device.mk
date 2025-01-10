@@ -216,12 +216,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service \
-    lights.sdm710
-
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
