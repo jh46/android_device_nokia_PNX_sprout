@@ -128,7 +128,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pnx
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_pnx)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_pnx
 
 # Media
