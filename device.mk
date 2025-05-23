@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
     libprocessgroup.vendor \
     libtinycompress \
     libvolumelistener \
+    tinymix
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
