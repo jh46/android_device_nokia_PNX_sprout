@@ -67,6 +67,14 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i -e 's|xliff=\"urn:oasis:names:tc:xliff:document:1.2|android=\"http:\/\/schemas.android.com\/apk\/res\/android|' "${2}"
             ;;
+        vendor/lib/hw/audio.primary.sdm710.so)
+            [ "$2" = "" ] && return 0
+            sed -i 's/\x20\x8F\xE0\xD8\xFD\xFF/\x70\xA0\xE3\x17\x01\x00/' "${2}"
+            ;;
+        vendor/lib64/hw/audio.primary.sdm710.so)
+            [ "$2" = "" ] && return 0
+            sed -i 's/\x21\xC4\x27\x91\x42\xF4\x1A\x91/\x53\x00\x80\x52\x0D\x01\x00\x14/' "${2}"
+            ;;
         vendor/lib/hw/camera.qcom.so | vendor/lib64/hw/camera.qcom.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --remove-needed "libMegviiFacepp.so" "${2}"
